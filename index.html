@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="./estilos/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="inicio">
+            <h1>¡Bienvenido a Blackjack!</h1>
+            <button id="mostrarInstrucciones" onclick="mostrarInstruccionesDesdeElJuego();"><img src="./img/question.png" alt=""></button>
+        </div>
+        <div id="botones-container">
+            <button id="jugarPartida" onclick="jugarPartida();">Jugar Partida</button>
+            <button id="recargar" onclick="recargarSaldo();">Recargar Saldo</button>
+            <button id="apostar" onmousedown="iniciarApostar();" onmouseup="detenerApostar();" onmouseleave="detenerApostar();">Apostar</button>
+            <button id="borrarApuesta" onclick="borrarApuesta();">Restablecer apuesta</button>
+        </div>
+        <div id="info-container">
+            <div id="apuesta">
+                <p>Apuesta: <span id="valorApuesta">0</span></p>
+            </div>
+            <div id="saldo">
+                <p>Saldo: <span id="valorSaldo"></span></p>
+            </div>
+        </div>
+        <div id="jugador">
+            <h2>Jugador</h2>
+            <div id="cartasJugador"></div>
+            <p id="sumaJugador"></p>
+        </div>
+        <div id="maquina">
+            <h2>Dealer</h2>
+            <div id="cartasMaquina"></div>
+            <p id="sumaMaquina"></p>
+        </div>
+        <button id="pedirCartaBtn" onclick="pedirCarta();">Pedir Carta</button>
+        <button id="plantarseBtn" onclick="plantarse()">Plantarse</button>
+        <div id="resultado-conteiner">
+            <p id="resultado"></p>
+        </div>
+        <div id="instrucciones-container">
+            <div id="instrucciones">
+                <h2>Instrucciones del Blackjack:</h2>
+                <ol>
+                    <li><strong>Objetivo:</strong> Obtener una mano con un valor cercano a 21 sin pasarse.</li>
+                    <br>
+                    <li><strong>Cartas:</strong> Las cartas numéricas valen su valor, las figuras (J, Q, K) valen 10 y los Ases pueden valer 1 u 11.</li>
+                    <br>
+                    <li><strong>Desarrollo del Juego:</strong>
+                        <ul>
+                            <li>Comienzas con 2 cartas visibles, la máquina muestra solo una.</li>
+                            <li>Puedes pedir más cartas ("Pedir") para acercarte a 21.</li>
+                            <li>Decides plantarte cuando estás satisfecho con tu mano.</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><strong>Ganar o Perder:</strong>
+                        <ul>
+                            <li>Si tu mano supera 21, pierdes automáticamente.</li>
+                            <li>Si tu mano es 21 a la primera, ganas automáticamente.</li>
+                            <li>Si la máquina supera 21, ganas automáticamente.</li>
+                            <li>Empatas si ambos suman lo mismo.</li>
+                            <li>Si tu mano supera a la de la máquina, ganas</li>
+                            <li>Si la mano de la máquina es mayor, pierdes.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <button onclick="cerrarInstrucciones();">Cerrar</button>
+                <button id="no-mostrar-mas" onclick="noMostrarMasFuncion();">No mostrar mas</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

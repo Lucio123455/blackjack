@@ -1,0 +1,171 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(https://e7.pngegg.com/pngimages/608/195/png-transparent-free-red-poker-casino-background.png);
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+#container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1a1e24;
+    border-radius: 10px;
+    border: #ffd700 solid 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #df1313; 
+}
+
+#jugador,
+#maquina {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #ffd700; 
+}
+
+#cartasJugador,
+#cartasMaquina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#cartasJugador img,
+#cartasMaquina img {
+    width: 80px;
+    height: auto;
+    margin: 0 5px;
+}
+
+
+p {
+    margin: 5px 0;
+}
+
+#resultado {
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 20px; 
+}
+
+button {
+    background-color: #df1313;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+} 
+
+button:hover {
+    background-color: #ff6666; 
+}
+
+
+
+#borrarApuesta:hover {
+    background-color: #ffe066; /
+}
+
+#apostar, #borrarApuesta {
+    background-color: #ffd700;
+    color: #1a1e24;
+}
+
+#apostar:hover {
+    background-color: #ffe066; 
+}
+
+#saldo, #apuesta {
+    display: inline-block;
+    padding: 10px;
+    background-color: #1a1e24; 
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px; 
+}
+
+
+#jugador p, #maquina p{
+    color: #ffd700;
+    font-size: 20px;
+    font-stretch: expanded;
+    border: #ffd700 solid 1px;
+    background-color: #2e3745;
+    padding: 10px;
+    display: inline-block;
+    
+}
+
+.resultado-perdido {
+    color: #df1313;
+}
+
+.resultado-ganado {
+    color: #32cd32;
+}
+
+.resultado-empate {
+    color: #ffd700;
+}
+
+#instrucciones-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 999;
+}
+
+#instrucciones {
+    text-align: center; 
+}
+
+#instrucciones h2 {
+    color: #ffd700; 
+}
+
+#instrucciones ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+#instrucciones li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+#inicio {
+    display: flex;
+    justify-content: center;
+}
+
+#mostrarInstrucciones {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    margin: 0; 
+}
+
+#mostrarInstrucciones img {
+    width: 50px; 
+    height: auto;
+}
+
+
