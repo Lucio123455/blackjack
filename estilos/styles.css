@@ -133,6 +133,14 @@ button:hover {
     z-index: 999;
 }
 
+@media only screen and (max-width: 600px) {
+    #instrucciones-container {
+        width: 90%; /* Ajustar el ancho para pantallas pequeñas */
+        max-width: 300px; /* Establecer un ancho máximo */
+        overflow: auto; /* Agregar desplazamiento si el contenido es demasiado grande */
+    }
+}
+
 #instrucciones {
     text-align: center; 
 }
